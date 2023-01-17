@@ -61,6 +61,7 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         if(billingDone == 0) {
+            billingDone++;
             //1. Extra Cheese
             if (extraCheese > 0) {
                 this.bill += "Extra Cheese Added: 80\n";

@@ -29,17 +29,28 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        extraCheese++;
+        extraCheese = 1;
+    }
+
+    public void addExtraToppings(){
+        // your code goes here
+        topping = 1;
+    }
+
+    public void addTakeaway(){
+        // your code goes here
+        takeaway = 1;
+    }
+
+    public String getBill(){
+        // your code goes here
+        //1. Extra Cheese
         if(extraCheese == 1){
             this.bill += "\nExtra Cheese Added: 80";
             this.price += 80;
             extraCheese++;
         }
-    }
-
-    public void addExtraToppings(){
-        // your code goes here
-        topping++;
+        //2. ExtraToppings
         if(topping == 1) {
             topping++;
             if(isVeg){
@@ -50,20 +61,12 @@ public class Pizza {
                 this.price += 120;
             }
         }
-    }
-
-    public void addTakeaway(){
-        // your code goes here
-        takeaway++;
+        //3. PaperBag
         if(takeaway == 1){
             takeaway++;
             this.bill += "\nPaperbag Added: 20";
             this.price += 20;
         }
-    }
-
-    public String getBill(){
-        // your code goes here
         this.bill += "\nTotal Price: " + this.price + "\n";
         return this.bill;
     }
